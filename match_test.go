@@ -2,10 +2,41 @@ package match
 
 import (
 	"testing"
-
-	"github.com/stretchr/testify/assert"
 )
 
+var trueEmails = []string{"adam@gmail.com", "joya@emmail.net", "jawad@hotmail.org"}
+var falseEmails = []string{"adam#gmail.com", "joya_emmail.net", "jawad@hotmail@org"}
+
+func Test_IsEmail(t *testing.T) {
+	t.Parallel()
+
+	for _, test := range trueEmails {
+		parsed := IsEmail(test)
+		if parsed != true {
+			t.Errorf("%s is not email (new)", test)
+		}
+	}
+}
+
+func Test_IsEmail0(t *testing.T) {
+	t.Parallel()
+
+	for _, test := range trueEmails {
+		parsed := IsEmail0(test)
+		if parsed != true {
+			t.Errorf("%s is not time", test)
+		}
+	}
+
+	for _, email := range falseEmails {
+		parsed := IsEmail0(email)
+		if parsed != false {
+			t.Errorf("%s is not email (new)", email)
+		}
+	}
+}
+
+// Dates
 var trueDates = []string{
 	"3-23-17",
 	"3.23.17",
@@ -14,36 +45,6 @@ var trueDates = []string{
 	"Mar 23th 2017",
 	"Mar. 23th, 2017",
 	"23 Mar 2017",
-}
-
-func BenchmarkIsDate(b *testing.B) {
-	for n := 0; n < b.N; n++ {
-		for _, time := range trueDates {
-			IsDate(time)
-
-		}
-		//for _, time := range falseTime {	IsDate(time)}
-	}
-}
-
-func BenchmarkIsDateStr(b *testing.B) {
-	for n := 0; n < b.N; n++ {
-		for _, time := range trueDates {
-			IsDateStr(time)
-		}
-		//for _, time := range falseTime {	IsDate(time)}
-	}
-}
-
-func TestIsDateStr(t *testing.T) {
-	t.Parallel()
-
-	for _, test := range trueDates {
-		parsed := IsDateStr(test)
-		if parsed != true {
-			t.Errorf("%s is not time", test)
-		}
-	}
 }
 
 func TestIsDate(t *testing.T) {
@@ -57,7 +58,18 @@ func TestIsDate(t *testing.T) {
 	}
 }
 
+func BenchmarkIsDate(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		for _, time := range trueDates {
+			IsDate(time)
+
+		}
+		//for _, time := range falseTime {	IsDate(time)}
+	}
+}
+
 // /////////////////////////////////////////////////
+/*
 func TestCommonRegex_Date(t *testing.T) {
 	t.Parallel()
 	assert := assert.New(t)
@@ -73,7 +85,7 @@ func TestCommonRegex_Date(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		parsed := Date(test)
+		parsed := IsDate(test)
 		assert.Equal([]string{test}, parsed, "they should be matched")
 	}
 }
@@ -769,3 +781,4 @@ func TestCommonRegex_GitRepos(t *testing.T) {
 		assert.NotEqual([]string{test}, parsed, "they should not be matched")
 	}
 }
+*/

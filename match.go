@@ -74,6 +74,23 @@ func match(text string, regex *regexp.Regexp) bool {
 	return regex.MatchString(text)
 }
 
+var emailRegex = regexp.MustCompile(
+	"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
+
+//var emailRegex = regexp.MustCompile(emailPattern)
+
+// IsEmails finds all email strings
+func IsEmail(text string) bool {
+	return match(text, emailRegex)
+}
+
+// IsEmails finds all email strings
+func IsEmail0(text string) bool {
+	return match(text, EmailRegex)
+}
+
+//////////////////////////////////////////////////
+
 // IsDate finds all date strings
 func IsDate(text string) bool {
 	return match(text, DateRegex)
@@ -97,11 +114,6 @@ func IsPhoneWithExt(text string) bool {
 // IsLinks finds all link strings
 func IsLink(text string) bool {
 	return match(text, LinkRegex)
-}
-
-// IsEmails finds all email strings
-func IsEmail(text string) bool {
-	return match(text, EmailRegex)
 }
 
 // IsIPv4s finds all IPv4 addresses
