@@ -1,14 +1,12 @@
 <br><br>
 
-<h1 align="center">CommonRegex</h1>
+<h1 align="center">Match</h1>
 
 <p align="center">
   <a href="/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"/></a>
   <a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fmingrammer%2Fcommonregex?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmingrammer%2Fcommonregex.svg?type=shield"/></a>
-  <a href="https://godoc.org/github.com/mingrammer/commonregex"><img src="https://godoc.org/github.com/mingrammer/commonregex?status.svg"/></a>
-  <a href="https://goreportcard.com/report/github.com/mingrammer/commonregex"><img src="https://goreportcard.com/badge/github.com/mingrammer/commonregex"/></a>
-  <a href="https://travis-ci.org/mingrammer/commonregex"><img src="https://travis-ci.org/mingrammer/commonregex.svg?branch=master"/></a>
-  <a href="https://codecov.io/gh/mingrammer/commonregex"><img src="https://codecov.io/gh/mingrammer/commonregex/branch/master/graph/badge.svg" /></a>
+  <a href="https://godoc.org/github.com/bashery/match"><img src="https://godoc.org/github.com/mingrammer/commonregex?status.svg"/></a>
+  <a href="https://goreportcard.com/report/github.com/bashery/match"><img src="https://goreportcard.com/badge/github.com/mingrammer/commonregex"/></a>
 </p>
 
 <p align="center">
@@ -23,29 +21,25 @@ This is a collection of often used regular expressions. It provides these as sim
 
 ## Installation
 ```shell
-go get github.com/mingrammer/commonregex
+go get github.com/bashery/match
 ```
 
 ## Usage
 
 ```go
 import (
-    cregex "github.com/mingrammer/commonregex"
+    "github.com/bashery/match"
 )
 
 func main() {
-    text := `John, please get that article on www.linkedin.com to me by 5:00PM on Jan 9th 2012. 4:00 would be ideal, actually. If you have any questions, You can reach me at (519)-236-2723x341 or get in touch with my associate at harold.smith@gmail.com`
 
-    dateList := cregex.Date(text)
-    // ['Jan 9th 2012']
-    timeList := cregex.Time(text)
-    // ['5:00PM', '4:00']
-    linkList := cregex.Links(text)
-    // ['www.linkedin.com', 'harold.smith@gmail.com']
-    phoneList := cregex.PhonesWithExts(text)  
-    // ['(519)-236-2723x341']
-    emailList := cregex.Emails(text)
-    // ['harold.smith@gmail.com']
+    match.IsDate("Jan 9th 2012") // true
+
+    match.IsTime("5:00PM") // true
+
+    match.IsLink("www.linkedin.com") // true
+
+    match.IsEmails("adams@email.com") // true
 }
 ```
 
@@ -90,6 +84,10 @@ func main() {
 * [@fakenine](https://github.com/fakenine)
 * [@Bill-Park](https://github.com/Bill-Park)
 * [@jakewarren](https://github.com/jakewarren)
+
+## Spicial hanks to :heart:
+** MinJae Kwon 
+* [@mingrammer](https://github.com/mingrammer)
 
 ## License
 
