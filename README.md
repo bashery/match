@@ -75,11 +75,11 @@ func main() {
 
 
 ## Tanks to :heart:
- *MinJae Kwon 
+MinJae Kwon
 * [@mingrammer](https://github.com/mingrammer)
 
 # NOTE:
-This library is inspired by Komonrig, and a lot of code has been copied and modified from it
+This library is inspired by commonregex, and a lot of code has been copied and modified from it
 
 ## License
 
