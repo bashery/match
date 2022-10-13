@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-Matching the most common expressionskkk
+Matching the most common expressions
 </p>
 
 <br><br><br>
