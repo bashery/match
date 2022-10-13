@@ -4,13 +4,9 @@
 
 <p align="center">
   <a href="/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"/></a>
-  <a href="https://godoc.org/github.com/bashery/match"> <h3>documments</h3></a>
-  <a href="https://goreportcard.com/report/github.com/bashery/match"><h3>goreportcard</h3></a>
 </p>
 
-<p align="center">
-Matching the most common expressions
-</p>
+<p align="center">Matching the most common expressions</p>
 
 <br><br>
 
@@ -40,34 +36,34 @@ func main() {
 
 ## Todo
 
-[x] Email
-* Date
-* Time
-* Phone
-* Phone with exts
-* Link
-* IPv4
-* IPv6
-* IP
-* Port without well-known (not known port)
-* Pric
-* Hex color
-* Credit card
-* VISA credit card
-* MC credit card
-* ISBN 10/13
-* BTC address
-* Street address
-* Zip code
-* Po box
-* SSN
-* MD5
-* SHA1
-* SHA256
-* GUID
-* MAC address
-* IBAN
-* Git Repository
+- [x] Email
+- [] Date
+- [] Time
+- [] Phone
+- [] Phone with exts
+- [] Link
+- [] IPv4
+- [] IPv6
+- [] IP
+- [] Port without well-known (not known port)
+- [] Pric
+- [] Hex color
+- [] Credit card
+- [] VISA credit card
+- [] MC credit card
+- [] ISBN 10/13
+- [] BTC address
+- [] Street address
+- [] Zip code
+- [] Po box
+- [] SSN
+- [] MD5
+- [] SHA1
+- [] SHA256
+- [] GUID
+- [] MAC address
+- [] IBAN
+- [] Git Repository
 
 
 ## License
