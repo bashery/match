@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  A collection of often used regular expressions for Go
+Matching the most common expressionskkk
 </p>
 
 <br><br><br>
