@@ -37,33 +37,33 @@ func main() {
 ## Todo
 
 - [x] Email
-- [] Date
-- [] Time
-- [] Phone
-- [] Phone with exts
-- [] Link
-- [] IPv4
-- [] IPv6
-- [] IP
-- [] Port without well-known (not known port)
-- [] Pric
-- [] Hex color
-- [] Credit card
-- [] VISA credit card
-- [] MC credit card
-- [] ISBN 10/13
-- [] BTC address
-- [] Street address
-- [] Zip code
-- [] Po box
-- [] SSN
-- [] MD5
-- [] SHA1
-- [] SHA256
-- [] GUID
-- [] MAC address
-- [] IBAN
-- [] Git Repository
+- [ ] Date
+- [ ] Time
+- [ ] Phone
+- [ ] Phone with exts
+- [ ] Link
+- [ ] IPv4
+- [ ] IPv6
+- [ ] IP
+- [ ] Port without well-known (not known port)
+- [ ] Pric
+- [ ] Hex color
+- [ ] Credit card
+- [ ] VISA credit card
+- [ ] MC credit card
+- [ ] ISBN 10/13
+- [ ] BTC address
+- [ ] Street address
+- [ ] Zip code
+- [ ] Po box
+- [ ] SSN
+- [ ] MD5
+- [ ] SHA1
+- [ ] SHA256
+- [ ] GUID
+- [ ] MAC address
+- [ ] IBAN
+- [ ] Git Repository
 
 
 ## License
