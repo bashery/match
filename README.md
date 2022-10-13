@@ -14,9 +14,6 @@ Matching the most common expressions
 
 <br><br><br>
 
-> Inspired by [CommonRegex](https://github.com/madisonmay/CommonRegex)
-
-This is a collection of often used regular expressions. It provides these as simple functions for getting the matched strings corresponding to specific patterns.
 
 ## Installation
 ```shell
@@ -77,10 +74,10 @@ func main() {
 ## Tanks to :heart:
 MinJae Kwon
 * [@mingrammer](https://github.com/mingrammer)
-
+<br>
 # NOTE:
-This library is inspired by commonregex, and a lot of code has been copied and modified from it
-
+This library is inspired by [CommonRegex](https://github.com/madisonmay/CommonRegex), and a lot of code has been copied and modified from it
+<br>
 ## License
 
 MIT
