@@ -4,8 +4,8 @@
 
 <p align="center">
   <a href="/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"/></a>
-  <a href="https://godoc.org/github.com/bashery/match"><img src="https://godoc.org/github.com/mingrammer/commonregex?status.svg"/></a>
-  <a href="https://goreportcard.com/report/github.com/bashery/match"><img src="https://goreportcard.com/badge/github.com/mingrammer/commonregex"/></a>
+  <a href="https://godoc.org/github.com/bashery/match"> <h3>documments</h3></a>
+  <a href="https://goreportcard.com/report/github.com/bashery/match"><h3>goreportcard</h3></a>
 </p>
 
 <p align="center">
@@ -38,14 +38,14 @@ func main() {
 }
 ```
 
-## Features
+## Todo
 
+[x] Email
 * Date
 * Time
 * Phone
 * Phone with exts
 * Link
-* Email
 * IPv4
 * IPv6
 * IP
@@ -69,12 +69,6 @@ func main() {
 * IBAN
 * Git Repository
 
-
-## Tanks to :heart:
-MinJae Kwon [@mingrammer](https://github.com/mingrammer)
- 
-## NOTE:
-This library is inspired by [CommonRegex](https://github.com/madisonmay/CommonRegex), and a lot of code has been copied and modified from it.
 
 ## License
 
