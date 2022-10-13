@@ -74,11 +74,9 @@ func main() {
 ## Tanks to :heart:
 MinJae Kwon [@mingrammer](https://github.com/mingrammer)
  
-<br>
 ## NOTE:
 This library is inspired by [CommonRegex](https://github.com/madisonmay/CommonRegex), and a lot of code has been copied and modified from it.
 
-<br>
 ## License
 
 MIT
