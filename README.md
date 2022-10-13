@@ -4,7 +4,6 @@
 
 <p align="center">
   <a href="/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"/></a>
-  <a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fmingrammer%2Fcommonregex?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmingrammer%2Fcommonregex.svg?type=shield"/></a>
   <a href="https://godoc.org/github.com/bashery/match"><img src="https://godoc.org/github.com/mingrammer/commonregex?status.svg"/></a>
   <a href="https://goreportcard.com/report/github.com/bashery/match"><img src="https://goreportcard.com/badge/github.com/mingrammer/commonregex"/></a>
 </p>
@@ -48,14 +47,14 @@ func main() {
 * Date
 * Time
 * Phone
-* Phones with exts
+* Phone with exts
 * Link
 * Email
 * IPv4
 * IPv6
 * IP
-* Ports without well-known (not known ports)
-* Price
+* Port without well-known (not known port)
+* Pric
 * Hex color
 * Credit card
 * VISA credit card
@@ -74,21 +73,14 @@ func main() {
 * IBAN
 * Git Repository
 
-## Thanks to :heart:
 
-* [@cschoede](https://github.com/cschoede)
-* [@schigh](https://github.com/schigh)
-* [@emaraschio](https://github.com/emaraschio)
-* [@mamal72](https://github.com/mamal72)
-* [@ahmdrz](https://github.com/ahmdrz)
-* [@fakenine](https://github.com/fakenine)
-* [@Bill-Park](https://github.com/Bill-Park)
-* [@jakewarren](https://github.com/jakewarren)
-
-## Spicial hanks to :heart:
-** MinJae Kwon 
+## Tanks to :heart:
+ *MinJae Kwon 
 * [@mingrammer](https://github.com/mingrammer)
+
+# NOTE:
+This library is inspired by Komonrig, and a lot of code has been copied and modified from it
 
 ## License
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmingrammer%2Fcommonregex.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmingrammer%2Fcommonregex?ref=badge_large)
+MIT
