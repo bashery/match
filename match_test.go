@@ -1,8 +1,77 @@
-package match
+package main
 
 import (
 	"testing"
 )
+
+var trueEmails = []string{"adam@email.com", "joha@gmail.com", "koko_helo@hotmail.com", "ahmed@bashery.net"}
+var falseEmails = []string{"55:59:59", "01:66:59", "23:23:oo"}
+
+func TestIsEmail(t *testing.T) {
+	for _, email := range trueEmails {
+		if IsEmail(email) != true {
+			t.Errorf("%s is not a email", email)
+
+		}
+	}
+	for _, email := range falseEmails {
+		if IsEmail(email) != false {
+			t.Errorf("%s is not a email", email)
+		}
+	}
+}
+
+var trueTime = []string{"23:59:59", "00:00:00", "12:12:12", "00:56:56", "12:13:12", "12:12:01"}
+var falseTime = []string{"55:59:59", "01:66:59", "23:23:oo", "01:66:59", "01:66:59", "33:66:59"}
+
+func TestIsTime(t *testing.T) {
+	for _, time := range trueTime {
+		if IsTime(time) != true {
+			t.Errorf("%s is not a time", time)
+
+		}
+	}
+	for _, time := range falseTime {
+		if IsTime(time) != false {
+			t.Errorf("%s is not a time", time)
+		}
+	}
+}
+
+func BenchmarkIsTime(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		for _, time := range trueTime {
+			IsTime(time)
+
+		}
+		for _, time := range falseTime {
+			IsTime(time)
+		}
+	}
+}
+
+///////////////////////
+
+var trueLinks = []string{"www.google.com", "http://www.google.com", "www.google.com/?query=dog", "sub.example.com", "http://www.google.com/%&#/?q=dog", "google.com"}
+var falseLinks = []string{"www#google.com", "http://www.google@com", "google#com/?query=dog", "##.e.x.ample.com", "hp://ww.co.com/%&#/?q=dog", "google.000"}
+
+func Test_IsLink(t *testing.T) {
+	t.Parallel()
+
+	for _, link := range trueLinks {
+		if IsLink(link) != true {
+			t.Error(link, "must be true")
+		}
+
+	}
+
+	for _, link := range falseLinks {
+		if IsLink(link) != false {
+			t.Error(link, "must be false")
+		}
+
+	}
+}
 
 var trueEmails = []string{"adam@gmail.com", "joya@emmail.net", "jawad@hotmail.org"}
 var falseEmails = []string{"adam#gmail.com", "joya_emmail.net", "jawad@hotmail@org"}
@@ -55,16 +124,6 @@ func TestIsDate(t *testing.T) {
 		if parsed != true {
 			t.Errorf("%s is not time", test)
 		}
-	}
-}
-
-func BenchmarkIsDate(b *testing.B) {
-	for n := 0; n < b.N; n++ {
-		for _, time := range trueDates {
-			IsDate(time)
-
-		}
-		//for _, time := range falseTime {	IsDate(time)}
 	}
 }
 
