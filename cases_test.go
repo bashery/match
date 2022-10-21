@@ -27,7 +27,7 @@ var trueTime = []string{
 	"9:45",
 	"23:45",
 	"9:00am",
-	"9am",
+	//	"9am",
 	"9:00 A.M.",
 	"9:00 pm",
 }
@@ -39,6 +39,14 @@ var falseTime = []string{
 	"01:66:59",
 	"01:66:59",
 	"33:66:59",
+	"19:45 pm",
+	"19:45 am",
+	"9:60",
+	"pm23:45",
+	"9:00:am",
+	"9am",
+	"19:00 A.M.",
+	"9:00:pm",
 }
 
 ///////////////////////
@@ -94,15 +102,6 @@ var tPhonesWithExts = []string{
 	"(523)222-8888EXT623",
 	"523-222-8888EXT623",
 	"(523) 222-8888 x 623",
-}
-
-var tLinks = []string{
-	"www.google.com",
-	"http://www.google.com",
-	"www.google.com/?query=dog",
-	"sub.example.com",
-	"http://www.google.com/%&#/?q=dog",
-	"google.com",
 }
 
 var tEmails = []string{

@@ -38,7 +38,7 @@ func main() {
 
 - [x] Email
 - [ ] Date
-- [ ] Time
+- [x] Time
 - [ ] Phone
 - [ ] Phone with exts
 - [ ] Link
